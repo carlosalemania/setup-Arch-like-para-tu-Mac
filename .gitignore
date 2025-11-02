@@ -1,0 +1,59 @@
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Directorios de sistema
+.Trash/
+.config/
+.cache/
+.local/
+.npm/
+.nvm/
+.cargo/
+.rustup/
+node_modules/
+
+# Archivos de configuración sensibles
+.ssh/
+.gnupg/
+.password-store/
+.aws/
+.docker/
+.kube/
+
+# Logs
+*.log
+*.err
+
+# Temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Homebrew
+Brewfile.lock.json
+
+# Específicos de este proyecto - Mantener solo docs y scripts
+# Ignorar todo excepto los archivos del setup
+/*
+!*.md
+!*.sh
+!.gitignore
+!README.md
+!LICENSE
+
+# No ignorar archivos de configuración importantes
+!.yabairc
+!.skhdrc

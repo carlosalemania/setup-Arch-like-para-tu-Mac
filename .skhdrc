@@ -1,0 +1,151 @@
+# =============================================================================
+# SKHD CONFIGURATION - 2025
+# Atajos de teclado estilo i3/Hyprland
+# =============================================================================
+
+# Tecla modificadora: cmd + shift = ⌘ + ⇧
+
+# =============================================================================
+# LANZAR APLICACIONES
+# =============================================================================
+
+# Terminal
+cmd + shift - return : open -na /Applications/Alacritty.app || open -na /Applications/Utilities/Terminal.app
+
+# Navegador
+cmd + shift - b : open -a "Safari"
+
+# Finder
+cmd + shift - e : open -a "Finder"
+
+# =============================================================================
+# WINDOW FOCUS (enfoque de ventanas)
+# =============================================================================
+
+# Cambiar enfoque entre ventanas
+cmd + shift - h : yabai -m window --focus west
+cmd + shift - j : yabai -m window --focus south
+cmd + shift - k : yabai -m window --focus north
+cmd + shift - l : yabai -m window --focus east
+
+# Alternativamente con flechas
+cmd + shift - left  : yabai -m window --focus west
+cmd + shift - down  : yabai -m window --focus south
+cmd + shift - up    : yabai -m window --focus north
+cmd + shift - right : yabai -m window --focus east
+
+# =============================================================================
+# MOVER VENTANAS
+# =============================================================================
+
+# Mover ventanas en el espacio actual
+cmd + ctrl + shift - h : yabai -m window --swap west
+cmd + ctrl + shift - j : yabai -m window --swap south
+cmd + ctrl + shift - k : yabai -m window --swap north
+cmd + ctrl + shift - l : yabai -m window --swap east
+
+# Con flechas
+cmd + ctrl + shift - left  : yabai -m window --swap west
+cmd + ctrl + shift - down  : yabai -m window --swap south
+cmd + ctrl + shift - up    : yabai -m window --swap north
+cmd + ctrl + shift - right : yabai -m window --swap east
+
+# =============================================================================
+# REDIMENSIONAR VENTANAS
+# =============================================================================
+
+# Expandir ventana
+cmd + alt - h : yabai -m window --resize left:-50:0
+cmd + alt - j : yabai -m window --resize bottom:0:50
+cmd + alt - k : yabai -m window --resize top:0:-50
+cmd + alt - l : yabai -m window --resize right:50:0
+
+# Contraer ventana
+cmd + alt + shift - h : yabai -m window --resize left:50:0
+cmd + alt + shift - j : yabai -m window --resize bottom:0:-50
+cmd + alt + shift - k : yabai -m window --resize top:0:50
+cmd + alt + shift - l : yabai -m window --resize right:-50:0
+
+# Balancear todas las ventanas
+cmd + shift - 0 : yabai -m space --balance
+
+# =============================================================================
+# ESPACIOS DE TRABAJO (WORKSPACES)
+# =============================================================================
+
+# Cambiar a workspace
+cmd + shift - 1 : yabai -m space --focus 1
+cmd + shift - 2 : yabai -m space --focus 2
+cmd + shift - 3 : yabai -m space --focus 3
+cmd + shift - 4 : yabai -m space --focus 4
+cmd + shift - 5 : yabai -m space --focus 5
+cmd + shift - 6 : yabai -m space --focus 6
+
+# Mover ventana a workspace
+cmd + ctrl + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
+cmd + ctrl + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
+cmd + ctrl + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
+cmd + ctrl + shift - 4 : yabai -m window --space 4; yabai -m space --focus 4
+cmd + ctrl + shift - 5 : yabai -m window --space 5; yabai -m space --focus 5
+cmd + ctrl + shift - 6 : yabai -m window --space 6; yabai -m space --focus 6
+
+# Workspace siguiente/anterior
+cmd + shift - n : yabai -m space --focus next
+cmd + shift - p : yabai -m space --focus prev
+
+# =============================================================================
+# LAYOUTS
+# =============================================================================
+
+# Toggle entre BSP y floating
+cmd + shift - space : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" else "bsp" end')
+
+# Rotar árbol 90 grados
+cmd + shift - r : yabai -m space --rotate 90
+
+# Flip en eje X/Y
+cmd + shift - x : yabai -m space --mirror x-axis
+cmd + shift - y : yabai -m space --mirror y-axis
+
+# =============================================================================
+# VENTANA: TOGGLE ESTADOS
+# =============================================================================
+
+# Fullscreen
+cmd + shift - f : yabai -m window --toggle zoom-fullscreen
+
+# Nativo fullscreen
+cmd + ctrl - f : yabai -m window --toggle native-fullscreen
+
+# Float / Unfloat
+cmd + shift - t : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
+
+# Split horizontal/vertical
+cmd + shift - e : yabai -m window --toggle split
+
+# =============================================================================
+# CERRAR VENTANA
+# =============================================================================
+
+cmd + shift - q : yabai -m window --close
+
+# =============================================================================
+# YABAI CONTROL
+# =============================================================================
+
+# Reiniciar yabai
+cmd + ctrl + shift - r : yabai --restart-service
+
+# Detener/Iniciar yabai
+cmd + ctrl + shift - q : yabai --stop-service
+cmd + ctrl + shift - s : yabai --start-service
+
+# =============================================================================
+# QUICK ACTIONS
+# =============================================================================
+
+# Captura de pantalla
+cmd + shift - s : screencapture -i ~/Desktop/screenshot-$(date +%Y%m%d-%H%M%S).png
+
+# Bloquear pantalla
+cmd + shift - escape : pmset displaysleepnow
