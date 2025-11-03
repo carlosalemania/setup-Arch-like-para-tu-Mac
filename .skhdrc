@@ -22,7 +22,7 @@ cmd + shift - e : open -a "Finder"
 # WINDOW FOCUS (enfoque de ventanas)
 # =============================================================================
 
-# Cambiar enfoque entre ventanas
+# Cambiar enfoque entre ventanas (cmd+shift para compatibilidad con macOS)
 cmd + shift - h : yabai -m window --focus west
 cmd + shift - j : yabai -m window --focus south
 cmd + shift - k : yabai -m window --focus north
@@ -34,11 +34,30 @@ cmd + shift - down  : yabai -m window --focus south
 cmd + shift - up    : yabai -m window --focus north
 cmd + shift - right : yabai -m window --focus east
 
+# Navegación más ergonómica (opcional - alt solo)
+# alt - h : yabai -m window --focus west
+# alt - j : yabai -m window --focus south
+# alt - k : yabai -m window --focus north
+# alt - l : yabai -m window --focus east
+
 # =============================================================================
-# MOVER VENTANAS
+# MULTI-MONITOR SUPPORT
 # =============================================================================
 
-# Mover ventanas en el espacio actual
+# Cambiar ventana entre monitores/displays
+alt - s : yabai -m window --display west; yabai -m display --focus west
+alt - g : yabai -m window --display east; yabai -m display --focus east
+
+# Enfocar monitor específico
+ctrl + alt - 1 : yabai -m display --focus 1
+ctrl + alt - 2 : yabai -m display --focus 2
+ctrl + alt - 3 : yabai -m display --focus 3
+
+# =============================================================================
+# MOVER VENTANAS (SWAP & WARP)
+# =============================================================================
+
+# SWAP - Intercambiar posiciones de ventanas
 cmd + ctrl + shift - h : yabai -m window --swap west
 cmd + ctrl + shift - j : yabai -m window --swap south
 cmd + ctrl + shift - k : yabai -m window --swap north
@@ -49,6 +68,12 @@ cmd + ctrl + shift - left  : yabai -m window --swap west
 cmd + ctrl + shift - down  : yabai -m window --swap south
 cmd + ctrl + shift - up    : yabai -m window --swap north
 cmd + ctrl + shift - right : yabai -m window --swap east
+
+# WARP - Mover ventana y dividir el espacio
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - l : yabai -m window --warp east
 
 # =============================================================================
 # REDIMENSIONAR VENTANAS
@@ -81,7 +106,7 @@ cmd + shift - 4 : yabai -m space --focus 4
 cmd + shift - 5 : yabai -m space --focus 5
 cmd + shift - 6 : yabai -m space --focus 6
 
-# Mover ventana a workspace
+# Mover ventana a workspace y seguir
 cmd + ctrl + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
 cmd + ctrl + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
 cmd + ctrl + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
@@ -92,6 +117,16 @@ cmd + ctrl + shift - 6 : yabai -m window --space 6; yabai -m space --focus 6
 # Workspace siguiente/anterior
 cmd + shift - n : yabai -m space --focus next
 cmd + shift - p : yabai -m space --focus prev
+
+# Mover ventana a espacio anterior/siguiente (sin seguir)
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
+
+# Crear/Destruir espacios
+cmd + alt - n : yabai -m space --create && \
+                index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                yabai -m space --focus "${index}"
+cmd + alt - w : yabai -m space --destroy
 
 # =============================================================================
 # LAYOUTS
@@ -149,3 +184,28 @@ cmd + shift - s : screencapture -i ~/Desktop/screenshot-$(date +%Y%m%d-%H%M%S).p
 
 # Bloquear pantalla
 cmd + shift - escape : pmset displaysleepnow
+
+# Abrir utilidades comunes
+shift + alt - t : open -na /Applications/Utilities/Activity\ Monitor.app
+shift + alt - s : open -na /System/Applications/System\ Settings.app
+
+# =============================================================================
+# NOTAS Y COMENTARIOS
+# =============================================================================
+
+# Atajos comentados para referencia:
+#
+# HYPER KEY (si está configurado con Karabiner-Elements):
+# hyper = cmd + ctrl + alt + shift
+#
+# Ejemplos con hyper:
+# hyper - h : yabai -m window --swap west
+# hyper - j : yabai -m window --swap south
+# hyper - k : yabai -m window --swap north
+# hyper - l : yabai -m window --swap east
+# hyper - e : yabai -m space --balance
+#
+# Para configurar hyper key:
+# 1. Instalar Karabiner-Elements
+# 2. Mapear Caps Lock a hyper
+# 3. Descomentar atajos hyper arriba
