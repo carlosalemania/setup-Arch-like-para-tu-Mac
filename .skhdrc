@@ -35,10 +35,10 @@ cmd + shift - up    : yabai -m window --focus north
 cmd + shift - right : yabai -m window --focus east
 
 # Navegación más ergonómica (opcional - alt solo)
-# alt - h : yabai -m window --focus west
-# alt - j : yabai -m window --focus south
-# alt - k : yabai -m window --focus north
-# alt - l : yabai -m window --focus east
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
 
 # =============================================================================
 # MULTI-MONITOR SUPPORT
@@ -57,7 +57,13 @@ ctrl + alt - 3 : yabai -m display --focus 3
 # MOVER VENTANAS (SWAP & WARP)
 # =============================================================================
 
-# SWAP - Intercambiar posiciones de ventanas
+# SWAP - Intercambiar posiciones de ventanas (Shift + Alt + h/j/k/l)
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# SWAP - Compatibilidad cmd + ctrl + shift
 cmd + ctrl + shift - h : yabai -m window --swap west
 cmd + ctrl + shift - j : yabai -m window --swap south
 cmd + ctrl + shift - k : yabai -m window --swap north
@@ -69,11 +75,18 @@ cmd + ctrl + shift - down  : yabai -m window --swap south
 cmd + ctrl + shift - up    : yabai -m window --swap north
 cmd + ctrl + shift - right : yabai -m window --swap east
 
-# WARP - Mover ventana y dividir el espacio
-ctrl + alt - h : yabai -m window --warp west
-ctrl + alt - j : yabai -m window --warp south
-ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - l : yabai -m window --warp east
+# WARP - Mover ventana y dividir el espacio (movido a cmd + ctrl + alt)
+cmd + ctrl + alt - h : yabai -m window --warp west
+cmd + ctrl + alt - j : yabai -m window --warp south
+cmd + ctrl + alt - k : yabai -m window --warp north
+cmd + ctrl + alt - l : yabai -m window --warp east
+
+# REDIMENSIONAR - ctrl + alt + h/j/k/l
+# Modo inteligente: expande si hay espacio, contrae si no
+ctrl + alt - h : yabai -m window --resize left:-50:0 || yabai -m window --resize right:-50:0
+ctrl + alt - j : yabai -m window --resize bottom:0:50 || yabai -m window --resize top:0:50
+ctrl + alt - k : yabai -m window --resize top:0:-50 || yabai -m window --resize bottom:0:-50
+ctrl + alt - l : yabai -m window --resize right:50:0 || yabai -m window --resize left:50:0
 
 # =============================================================================
 # REDIMENSIONAR VENTANAS
@@ -91,14 +104,23 @@ cmd + alt + shift - j : yabai -m window --resize bottom:0:-50
 cmd + alt + shift - k : yabai -m window --resize top:0:50
 cmd + alt + shift - l : yabai -m window --resize right:-50:0
 
-# Balancear todas las ventanas
+# Balancear todas las ventanas (Shift + Alt + 0)
+shift + alt - 0 : yabai -m space --balance
 cmd + shift - 0 : yabai -m space --balance
 
 # =============================================================================
 # ESPACIOS DE TRABAJO (WORKSPACES)
 # =============================================================================
 
-# Cambiar a workspace
+# Cambiar a workspace (Alt + número)
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+
+# Cambiar a workspace (cmd + shift para compatibilidad)
 cmd + shift - 1 : yabai -m space --focus 1
 cmd + shift - 2 : yabai -m space --focus 2
 cmd + shift - 3 : yabai -m space --focus 3
@@ -106,7 +128,15 @@ cmd + shift - 4 : yabai -m space --focus 4
 cmd + shift - 5 : yabai -m space --focus 5
 cmd + shift - 6 : yabai -m space --focus 6
 
-# Mover ventana a workspace y seguir
+# Mover ventana a workspace (Shift + Alt + número)
+shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
+
+# Mover ventana a workspace y seguir (cmd + ctrl + shift para compatibilidad)
 cmd + ctrl + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
 cmd + ctrl + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
 cmd + ctrl + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
@@ -135,7 +165,8 @@ cmd + alt - w : yabai -m space --destroy
 # Toggle entre BSP y floating
 cmd + shift - space : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" else "bsp" end')
 
-# Rotar árbol 90 grados
+# Rotar árbol 90 grados (Alt + r)
+alt - r : yabai -m space --rotate 90
 cmd + shift - r : yabai -m space --rotate 90
 
 # Flip en eje X/Y
@@ -146,13 +177,15 @@ cmd + shift - y : yabai -m space --mirror y-axis
 # VENTANA: TOGGLE ESTADOS
 # =============================================================================
 
-# Fullscreen
+# Fullscreen (Alt + f)
+alt - f : yabai -m window --toggle zoom-fullscreen
 cmd + shift - f : yabai -m window --toggle zoom-fullscreen
 
 # Nativo fullscreen
 cmd + ctrl - f : yabai -m window --toggle native-fullscreen
 
-# Float / Unfloat
+# Float / Unfloat (Alt + t)
+alt - t : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 cmd + shift - t : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 
 # Split horizontal/vertical
