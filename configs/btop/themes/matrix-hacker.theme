@@ -1,0 +1,85 @@
+# Matrix Hacker Theme for btop
+# Verde Matrix puro con acentos cyan
+# Perfecto para sentirte en The Matrix
+
+# Main background - Negro absoluto
+theme[main_bg]="#000000"
+
+# Main text color - Verde Matrix
+theme[main_fg]="#00ff41"
+
+# Title color - Cyan brillante
+theme[hi_fg]="#00ffff"
+
+# Highlight
+theme[title]="#00ff41"
+
+# Selected item
+theme[selected_bg]="#003300"
+theme[selected_fg]="#00ff41"
+
+# Inactive text
+theme[inactive_fg]="#004400"
+
+# Graph text
+theme[graph_text]="#00ff41"
+
+# Meter background
+theme[meter_bg]="#001100"
+
+# Misc
+theme[proc_misc]="#00ffff"
+
+# Box colors - Todos verde Matrix
+theme[cpu_box]="#00ff41"
+theme[mem_box]="#00ff41"
+theme[net_box]="#00ffff"
+theme[proc_box]="#00ff41"
+
+# Divider
+theme[div_line]="#003300"
+
+# Temperature
+theme[temp_start]="#00ff41"
+theme[temp_mid]="#ffff00"
+theme[temp_end]="#ff0000"
+
+# CPU - Verde intenso
+theme[cpu_start]="#00ff41"
+theme[cpu_mid]="#00ff99"
+theme[cpu_end]="#00ffcc"
+
+# Mem free - Verde oscuro a claro
+theme[free_start]="#004400"
+theme[free_mid]="#00aa00"
+theme[free_end]="#00ff41"
+
+# Cached - Cyan Matrix
+theme[cached_start]="#00ffff"
+theme[cached_mid]="#00ff99"
+theme[cached_end]="#00ffcc"
+
+# Available - Verde brillante
+theme[available_start]="#00cc00"
+theme[available_mid]="#00ff00"
+theme[available_end]="#00ff41"
+
+# Used - Verde a amarillo
+theme[used_start]="#00ff41"
+theme[used_mid]="#88ff00"
+theme[used_end]="#ffff00"
+
+# Download - Verde Matrix puro
+theme[download_start]="#00ff41"
+theme[download_mid]="#00ff99"
+theme[download_end]="#00ffff"
+
+# Upload - Amarillo Matrix
+theme[upload_start]="#ffff00"
+theme[upload_mid]="#88ff00"
+theme[upload_end]="#00ff41"
+
+# Process - Degradado Matrix
+theme[process_start]="#00ff41"
+theme[process_mid]="#00ffcc"
+theme[process_end]="#00ffff"

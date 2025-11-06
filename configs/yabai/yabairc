@@ -1,0 +1,91 @@
+#!/usr/bin/env sh
+
+# 🔥 YABAI CONFIG - BORDES ROSA NEÓN ÉPICOS
+# Creado por: Carlos Alemania
+
+# ====================================
+# WINDOW BORDERS - BORDES ÉPICOS
+# ====================================
+
+# Activar bordes de ventana
+yabai -m config window_border on
+
+# Ancho del borde (en píxeles)
+yabai -m config window_border_width 6
+
+# Radio de bordes redondeados
+yabai -m config window_border_radius 12
+
+# COLORES ROSA NEÓN + CYAN
+# Ventana activa: Rosa neón profundo (#ff0080 o #ff1493)
+yabai -m config active_window_border_color 0xffff0080
+
+# Ventana normal: Cyan oscuro con transparencia
+yabai -m config normal_window_border_color 0x40808080
+
+# Ventana insertada: Cyan neón
+yabai -m config insert_feedback_color 0xff00ffff
+
+# ====================================
+# LAYOUT & BEHAVIOR
+# ====================================
+
+# Layout por defecto (bsp = binary space partitioning, float = flotante)
+yabai -m config layout bsp
+
+# Padding entre ventanas y bordes de pantalla
+yabai -m config top_padding    12
+yabai -m config bottom_padding 12
+yabai -m config left_padding   12
+yabai -m config right_padding  12
+yabai -m config window_gap     12
+
+# ====================================
+# MOUSE SETTINGS
+# ====================================
+
+# Enfoque sigue al mouse (opcional - desactivado por defecto)
+yabai -m config focus_follows_mouse off
+
+# Mouse sigue al enfoque
+yabai -m config mouse_follows_focus off
+
+# Modificador para mover ventanas (alt = option)
+yabai -m config mouse_modifier alt
+
+# Click izquierdo + modificador = mover ventana
+yabai -m config mouse_action1 move
+
+# Click derecho + modificador = redimensionar ventana
+yabai -m config mouse_action2 resize
+
+# ====================================
+# WINDOW SETTINGS
+# ====================================
+
+# Nuevas ventanas spawn a la derecha
+yabai -m config window_placement second_child
+
+# Opacidad de ventanas
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.95
+
+# Sombras en ventanas flotantes
+yabai -m config window_shadow float
+
+# ====================================
+# REGLAS DE APLICACIONES
+# ====================================
+
+# Apps que deben flotar (no tiling)
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Disk Utility$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+
+echo "🔥 Yabai config cargada - Bordes rosa neón activados!"

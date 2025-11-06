@@ -1,0 +1,93 @@
+# Cyberpunk Neon Theme for btop
+# Ultra vibrante con neones brillantes
+# CPU: light magenta | MEM: blue | SWAP: cyan | RX: green | TX: red
+
+# Main background - Negro profundo para contraste máximo
+theme[main_bg]="#0a0e14"
+
+# Main text color - Blanco puro
+theme[main_fg]="#ffffff"
+
+# Title color - Cyan neón brillante
+theme[hi_fg]="#00ffff"
+
+# Highlight color for keyboard shortcuts
+theme[title]="#ff00ff"
+
+# Background color of selected item
+theme[selected_bg]="#1a1f29"
+
+# Foreground color of selected item - Cyan brillante
+theme[selected_fg]="#00ffff"
+
+# Color of inactive/disabled text - Gris
+theme[inactive_fg]="#5c6370"
+
+# Graph text color - Blanco
+theme[graph_text]="#ffffff"
+
+# Meter background - Gris oscuro
+theme[meter_bg]="#1a1f29"
+
+# Misc colors
+theme[proc_misc]="#00ffff"
+
+# CPU box - Light Magenta neón
+theme[cpu_box]="#ff00ff"
+
+# MEM box - Azul eléctrico
+theme[mem_box]="#0080ff"
+
+# NET box - Verde neón
+theme[net_box]="#00ff00"
+
+# PROC box - Naranja neón
+theme[proc_box]="#ff8800"
+
+# Box divider line - Gris medio
+theme[div_line]="#3e4451"
+
+# Temperature graph (Verde -> Amarillo -> Rojo neón)
+theme[temp_start]="#00ff00"
+theme[temp_mid]="#ffff00"
+theme[temp_end]="#ff0000"
+
+# CPU graph - Light Magenta neón con degradado
+theme[cpu_start]="#ff00ff"
+theme[cpu_mid]="#ff66ff"
+theme[cpu_end]="#ff99ff"
+
+# Mem/Disk free - Azul eléctrico degradado
+theme[free_start]="#0080ff"
+theme[free_mid]="#0099ff"
+theme[free_end]="#00b3ff"
+
+# Mem/Disk cached - Cyan neón brillante (SWAP)
+theme[cached_start]="#00ffff"
+theme[cached_mid]="#00ffff"
+theme[cached_end]="#66ffff"
+
+# Mem/Disk available - Púrpura eléctrico
+theme[available_start]="#8800ff"
+theme[available_mid]="#aa00ff"
+theme[available_end]="#cc00ff"
+
+# Mem/Disk used - Magenta a Rosa neón
+theme[used_start]="#ff00ff"
+theme[used_mid]="#ff0088"
+theme[used_end]="#ff0066"
+
+# Download (RX) - Verde Matrix brillante
+theme[download_start]="#00ff00"
+theme[download_mid]="#00ff66"
+theme[download_end]="#00ff99"
+
+# Upload (TX) - Rojo fuego intenso
+theme[upload_start]="#ff0000"
+theme[upload_mid]="#ff3300"
+theme[upload_end]="#ff6600"
+
+# Process gradient - Arcoíris neón
+theme[process_start]="#ff00ff"
+theme[process_mid]="#00ffff"
+theme[process_end]="#00ff00"

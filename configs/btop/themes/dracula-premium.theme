@@ -1,0 +1,87 @@
+# Dracula Premium Theme for btop
+# Tema oscuro con colores vibrantes y neón
+# Creado con elementos personalizados: cyan neón, azul eléctrico, púrpuras profundos
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#282a36"
+
+# Main text color
+theme[main_fg]="#f8f8f2"
+
+# Title color for boxes
+theme[title]="#ff79c6"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#8be9fd"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#44475a"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#ff79c6"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#6272a4"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#f8f8f2"
+
+# Background color of the percentage meters
+theme[meter_bg]="#44475a"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#8be9fd"
+
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#bd93f9"
+theme[mem_box]="#8be9fd"
+theme[net_box]="#50fa7b"
+theme[proc_box]="#ffb86c"
+
+# Box divider line and small boxes line color
+theme[div_line]="#6272a4"
+
+# Temperature graph color (Green -> Yellow -> Red)
+theme[temp_start]="#50fa7b"
+theme[temp_mid]="#f1fa8c"
+theme[temp_end]="#ff5555"
+
+# CPU graph colors (Magenta -> Cyan gradient neón)
+theme[cpu_start]="#ff79c6"
+theme[cpu_mid]="#bd93f9"
+theme[cpu_end]="#8be9fd"
+
+# Mem/Disk free meter (Azul eléctrico -> Púrpura profundo)
+theme[free_start]="#8be9fd"
+theme[free_mid]="#bd93f9"
+theme[free_end]="#6272a4"
+
+# Mem/Disk cached meter (Cyan neón vibrante)
+theme[cached_start]="#8be9fd"
+theme[cached_mid]="#50fa7b"
+theme[cached_end]="#8be9fd"
+
+# Mem/Disk available meter (Purple -> Pink gradient)
+theme[available_start]="#bd93f9"
+theme[available_mid]="#ff79c6"
+theme[available_end]="#ff92d0"
+
+# Mem/Disk used meter (Pink -> Orange gradient)
+theme[used_start]="#ff79c6"
+theme[used_mid]="#ffb86c"
+theme[used_end]="#ff5555"
+
+# Download graph colors (Verde Matrix/Neón)
+theme[download_start]="#50fa7b"
+theme[download_mid]="#8be9fd"
+theme[download_end]="#50fa7b"
+
+# Upload graph colors (Rojo -> Naranja fuego)
+theme[upload_start]="#ff5555"
+theme[upload_mid]="#ffb86c"
+theme[upload_end]="#ff6e67"
+
+# Process box color gradient (Purple haze)
+theme[process_start]="#bd93f9"
+theme[process_mid]="#ff79c6"
+theme[process_end]="#8be9fd"

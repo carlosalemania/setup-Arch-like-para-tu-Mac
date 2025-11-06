@@ -1,0 +1,143 @@
+# btop Configuration - Configuración Épica
+# Creada con gradientes personalizados y caracteres especiales
+
+# Color theme
+color_theme = "cyberpunk-neon"
+
+# Shown in the upper left corner
+shown_boxes = "cpu mem net proc"
+
+# Update time in milliseconds
+update_ms = 1000
+
+# Processes sorting (pid, program, arguments, threads, user, memory, cpu lazy, cpu direct)
+proc_sorting = "cpu lazy"
+
+# Reverse sorting order
+proc_reversed = False
+
+# Show process tree
+proc_tree = False
+
+# Tree mode sorting (pid, program, arguments, threads, user, memory, cpu)
+tree_depth = 3
+
+# Process colors
+proc_colors = True
+
+# Gradient colors
+proc_gradient = True
+
+# Process memory in percent
+proc_mem_bytes = True
+
+# CPU graph scaling
+cpu_graph_upper = "total"
+cpu_graph_lower = "total"
+
+# Show CPU temperatures
+show_cpu_freq = True
+
+# Check for updates
+check_temp = True
+
+# CPU sensor
+cpu_sensor = "Auto"
+
+# Show temperatures in Celsius
+temp_scale = "celsius"
+
+# Show IO disks
+show_disks = True
+
+# Disks to show (space separated)
+disk_filter = ""
+
+# Show IO stats for disks
+show_io_stat = True
+
+# Show disk io graph
+io_mode = True
+
+# Graph mode for IO activity
+io_graph_combined = False
+
+# Set network graph mode (bandwidth, throughput)
+net_download = 1
+net_upload = 1
+
+# Network graph colors
+net_color_fixed = False
+
+# Sync network graph speeds
+net_auto = True
+
+# Network interface to use
+net_iface = ""
+
+# Network stats in bytes per second
+net_sync = True
+
+# Show detailed stats
+show_battery = True
+
+# Selected battery
+selected_battery = "Auto"
+
+# Log level (ERROR, WARNING, INFO, DEBUG)
+log_level = "WARNING"
+
+# Graph symbols - Caracteres especiales para gráficos épicos
+# braille, block, tty
+graph_symbol = "braille"
+
+# Shown graph symbols for CPU
+graph_symbol_cpu = "default"
+
+# Shown graph symbols for MEM
+graph_symbol_mem = "default"
+
+# Shown graph symbols for NET
+graph_symbol_net = "default"
+
+# Shown graph symbols for PROC
+graph_symbol_proc = "default"
+
+# Update check at start
+update_check = True
+
+# Use Unicode
+force_tty = False
+
+# TTY mode
+tty_mode = False
+
+# Show init screen
+show_init = True
+
+# Background update
+background_update = True
+
+# Rounded corners (needs terminal support)
+rounded_corners = True
+
+# Clock format
+clock_format = "%X"
+
+# Custom CPU name
+custom_cpu_name = ""
+
+# Show CPU cores separately
+show_cpu_core_temps = True
+
+# Disk free space
+disk_free_priv = False
+
+# Show GPU in processes list
+enable_gpu = True
+
+# Disable mouse
+disable_mouse = False
+
+# Set static network graph max speed
+net_minmax = "Auto"
