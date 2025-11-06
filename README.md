@@ -56,6 +56,28 @@
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+### 🎨 Temas & Personalización
+- ✅ Warp Terminal temas neón
+- ✅ btop con 4 temas épicos
+- ✅ Bordes rosa neón (JankyBorders)
+- ✅ Gradientes personalizados
+- ✅ Paleta cyberpunk
+
+</td>
+<td width="50%">
+
+### 🔥 Bordes de Ventana
+- ✅ Rosa neón (#ff0080)
+- ✅ 6px grosor redondeado
+- ✅ Blur suave profesional
+- ✅ Auto-detección ventana activa
+- ✅ Personalizable por color
+
+</td>
+</tr>
 </table>
 
 ---
@@ -67,7 +89,16 @@
 |------------|---------|-------------|
 | **Yabai** | v7.1.16 | Tiling window manager (BSP) |
 | **Skhd** | v0.3.9 | Hotkey daemon |
+| **JankyBorders** | v1.8.4 | Bordes de ventana personalizados |
 | **SketchyBar** | v2.23.0 | Status bar personalizable |
+
+### 🎨 Temas & Terminal
+| Componente | Descripción |
+|------------|-------------|
+| **Warp Terminal** | Terminal moderna con temas neón |
+| **btop** | Monitor del sistema con 4 temas épicos |
+| **Temas Warp** | Neon Fire Tokyo, Cyberpunk Fire |
+| **Temas btop** | Dracula, Cyberpunk, Tokyo Night, Matrix |
 
 ### 🛠️ Herramientas CLI
 | Herramienta | Reemplaza | Mejora |
